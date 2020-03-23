@@ -3,7 +3,7 @@ package models;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 
-public class OfficerClientWepon {
+public class OfficerClientWepon extends EntityClass {
     private StringProperty givenWp;
     private StringProperty backWp;
     private Officer officer = new Officer();

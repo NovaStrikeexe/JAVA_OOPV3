@@ -3,7 +3,7 @@ package models;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Action {
+public class Action extends EntityClass{
     private StringProperty name = new SimpleStringProperty();
 
     private Action(String n) {

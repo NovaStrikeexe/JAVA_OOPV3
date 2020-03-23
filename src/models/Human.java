@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Human {
+public class Human extends EntityClass{
     protected StringProperty nameofhuman = new SimpleStringProperty();
     protected StringProperty snameofhuman = new SimpleStringProperty();
     protected IntegerProperty ageofhuman = new SimpleIntegerProperty();
@@ -38,12 +38,16 @@ public class Human {
     }
 
 
-    public Human() { }
+    public Human() {
+        super();
+    }
 
     public Human(StringProperty nameofhuman, StringProperty snameofhuman, IntegerProperty ageofhuman) {
+        super();
         this.nameofhuman = nameofhuman;
         this.snameofhuman = snameofhuman;
         this.ageofhuman = ageofhuman;
+
     }
 }
 

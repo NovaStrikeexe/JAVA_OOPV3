@@ -2,7 +2,7 @@ package models;
 
 import javafx.beans.property.StringProperty;
 
-public class ShootingRange {
+public class ShootingRange extends EntityClass {
 
     private Officer officer = new Officer();
     private StringProperty shotingGalleryType;

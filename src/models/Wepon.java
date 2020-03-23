@@ -4,13 +4,15 @@ import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 
-public class Wepon extends Human {
+public class Wepon extends EntityClass{
     private StringProperty mark;
     private IntegerProperty level_of_access;
     private FloatProperty calibr;
     private IntegerProperty ammo;
 
+
     public Wepon() {
+        super();
         this.mark = mark;
         this.level_of_access = level_of_access;
         this.calibr = calibr;

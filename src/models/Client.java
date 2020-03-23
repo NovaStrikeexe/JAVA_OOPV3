@@ -9,7 +9,7 @@ public class Client extends Human {
 
     private BooleanProperty type_of_visit = new SimpleBooleanProperty();
 
-    public Client(String nova, String strike, int i, int i1) {
+    public Client() {
     }
 
     public void setType_of_visit(BooleanProperty type_of_visit) {
