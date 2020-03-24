@@ -11,9 +11,7 @@ public class OfficerClientWepon extends EntityClass {
     private Wepon wepon = new Wepon();
     public ObjectProperty<Action> action;
 
-    private enum Action {givingWepon, backingWepon}
-
-    ;
+    private enum Action {givingWepon, backingWepon};
 
 
     public OfficerClientWepon(StringProperty givenWp, StringProperty backWp, Officer officer, Client client, Wepon wepon) {

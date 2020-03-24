@@ -18,7 +18,6 @@ public class Human extends EntityClass{
         this.snameofhuman = snameofhuman;
     }
 
-
     public void setAgeofhuman(IntegerProperty ageofhuman) {
         this.ageofhuman = ageofhuman;
     }

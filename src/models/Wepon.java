@@ -6,15 +6,13 @@ import javafx.beans.property.StringProperty;
 
 public class Wepon extends EntityClass{
     private StringProperty mark;
-    private IntegerProperty level_of_access;
     private FloatProperty calibr;
     private IntegerProperty ammo;
 
 
+
     public Wepon() {
-        super();
         this.mark = mark;
-        this.level_of_access = level_of_access;
         this.calibr = calibr;
         this.ammo = ammo;
     }
@@ -30,19 +28,7 @@ public class Wepon extends EntityClass{
     public void setMark(String mark) {
         this.mark.set(mark);
     }
-
-    public int getLevel_of_access() {
-        return level_of_access.get();
-    }
-
-    public IntegerProperty level_of_accessProperty() {
-        return level_of_access;
-    }
-
-    public void setLevel_of_access(int level_of_access) {
-        this.level_of_access.set(level_of_access);
-    }
-
+    
     public float getCalibr() {
         return calibr.get();
     }
