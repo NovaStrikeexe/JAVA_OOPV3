@@ -10,17 +10,13 @@ public class Human extends EntityClass{
     protected StringProperty snameofhuman = new SimpleStringProperty();
     protected IntegerProperty ageofhuman = new SimpleIntegerProperty();
 
-    public void setNameofhuman(StringProperty nameofhuman) {
-        this.nameofhuman = nameofhuman;
+    public void setNameofhuman(String nameofhuman) {
+        this.nameofhuman.set(nameofhuman);
     }
 
-    public void setSnameofhuman(StringProperty snameofhuman) {
-        this.snameofhuman = snameofhuman;
-    }
+    public void setSnameofhuman(String snameofhuman) { this.snameofhuman.set(snameofhuman); }
 
-    public void setAgeofhuman(IntegerProperty ageofhuman) {
-        this.ageofhuman = ageofhuman;
-    }
+    public void setAgeofhuman(Integer ageofhuman) { this.ageofhuman.set(ageofhuman); }
 
 
     public StringProperty getNameofhuman() {
@@ -41,11 +37,11 @@ public class Human extends EntityClass{
         super();
     }
 
-    public Human(StringProperty nameofhuman, StringProperty snameofhuman, IntegerProperty ageofhuman) {
+    public Human(String nameofhuman, String snameofhuman, Integer ageofhuman) {
         super();
-        this.nameofhuman = nameofhuman;
-        this.snameofhuman = snameofhuman;
-        this.ageofhuman = ageofhuman;
+        this.nameofhuman.set(nameofhuman);
+        this.snameofhuman.set(snameofhuman);
+        this.ageofhuman.set(ageofhuman);
 
     }
 }

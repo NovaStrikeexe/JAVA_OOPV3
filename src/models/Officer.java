@@ -1,19 +1,22 @@
 package models;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Officer extends Human {
-    private StringProperty WorkExperience;
-    private StringProperty WorkSchedule;
+    private StringProperty WorkExperience = new SimpleStringProperty();
+    private StringProperty WorkSchedule = new SimpleStringProperty();
 
 
-    public void setWorkExperience(StringProperty workExperience) {
-        WorkExperience = workExperience;
+    public void setWorkExperience(String WorkExperience) {
+
+        this.WorkExperience.set(WorkExperience);
     }
 
-    public void setWorkSchedule(StringProperty workSchedule) {
-        WorkSchedule = workSchedule;
+    public void setWorkSchedule(String WorkSchedule) {
+
+        this.WorkSchedule.set(WorkSchedule);
     }
 
     public StringProperty getWorkExperience() {
@@ -25,16 +28,15 @@ public class Officer extends Human {
     }
 
 
-
     public Officer() {
     }
 
-    public Officer(StringProperty nameofhuman, StringProperty snameofhuman, IntegerProperty ageofhuman,
-                   StringProperty WorkExperience, StringProperty WorkSchedule) {
-        this.nameofhuman = nameofhuman;
-        this.snameofhuman = snameofhuman;
-        this.ageofhuman = ageofhuman;
-        this.WorkExperience = WorkExperience;
-        this.WorkSchedule = WorkSchedule;
+    public Officer(String nameofhuman, String snameofhuman, Integer ageofhuman,
+                   String WorkExperience, String WorkSchedule) {
+        this.nameofhuman.set(nameofhuman);
+        this.snameofhuman.set(snameofhuman);
+        this.ageofhuman.set(ageofhuman);
+        this.WorkExperience.set(WorkExperience);
+        this.WorkSchedule.set(WorkSchedule);
     }
 }

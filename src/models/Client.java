@@ -9,11 +9,10 @@ public class Client extends Human {
 
     private BooleanProperty type_of_visit = new SimpleBooleanProperty();
 
-    public Client() {
-    }
+    public Client() { }
 
-    public void setType_of_visit(BooleanProperty type_of_visit) {
-        this.type_of_visit = type_of_visit;
+    public void setType_of_visit(Boolean type_of_visit) {
+        this.type_of_visit.set(type_of_visit);
     }
 
     public BooleanProperty getTypeOfvisist() {
@@ -21,11 +20,11 @@ public class Client extends Human {
     }
 
 
-    public Client(StringProperty nameofhuman, StringProperty snameofhuman, IntegerProperty ageofhuman, BooleanProperty type_of_visit) {
-        this.nameofhuman = nameofhuman;
-        this.snameofhuman = snameofhuman;
-        this.ageofhuman = ageofhuman;
-        this.type_of_visit = type_of_visit;
+    public Client(String nameofhuman, String snameofhuman, Integer ageofhuman, Boolean type_of_visit) {
+        this.nameofhuman.set(nameofhuman);
+        this.snameofhuman.set(snameofhuman);
+        this.ageofhuman.set(ageofhuman);
+        this.type_of_visit.set(type_of_visit);
     }
 }
 
