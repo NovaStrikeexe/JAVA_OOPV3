@@ -5,6 +5,7 @@ import gateways.ClientGateway;
 
 import gateways.Gateway;
 import gateways.OfficerGateway;
+import gateways.WeponGateway;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -22,41 +23,42 @@ import java.io.IOException;
 
 public class StackController {
     @FXML
+    TextField MarkOfWeponTF;
+    @FXML
+    TextField CalibrOfWeponTF;
+    @FXML
+    TextField AmmoTF;
+    @FXML
     TextField NameOfficerTF;
-
     @FXML
     TextField SNameOfficerTF;
-
     @FXML
     TextField AgeOfOfficerTF;
-
     @FXML
     TextField WorkExperience;
-
     @FXML
     TextField WorkSchedule;
     @FXML
     TextField nameOfClientTF;
-
     @FXML
     TextField secondnameOfClient;
-
     @FXML
     TextField ageOfClient;
-
     @FXML
     RadioButton typeOfVisitOneRB;
-
     @FXML
     RadioButton typeOfVisitAllRB;
-
     @FXML
     Pane ClientPanel;
-
     @FXML
     Pane OfficerPanel;
     @FXML
+    Pane WeponPanel;
+    @FXML
     Button clickAddClient;
+    @FXML
+    Button toWepon;
+
     @FXML
     Button ToOfficer;
 
@@ -64,78 +66,125 @@ public class StackController {
     Gateway<Client> clientGateway = new ClientGateway();
     @FXML
     Gateway<Officer> officerGateway = new OfficerGateway();
+    @FXML
+    Gateway<Wepon> weponGateway = new WeponGateway();
+
+    public void clickAddWepon(){
+        String mark = "";
+        Float calibr = null;
+        int ammo = 0;
+        int flag = 0;
+        if(MarkOfWeponTF.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Mark_Error");
+            alert.setContentText("Mark not given");
+            alert.showAndWait();
+        }
+        else {
+            mark = MarkOfWeponTF.getText();
+            flag++;
+        }
+        if (CalibrOfWeponTF.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Calibr_Error");
+            alert.setContentText("Calibr not given");
+            alert.showAndWait();
+        }
+        else {
+            calibr = Float.valueOf(CalibrOfWeponTF.getText());
+            flag++;
+        }
+        if (AmmoTF.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Calibr_Error");
+            alert.setContentText("Calibr not given");
+            alert.showAndWait();
+        }
+        else {
+            ammo = Integer.parseInt(AmmoTF.getText());
+            flag ++;
+        }
+        if (flag == 3){
+            Wepon wepon = new Wepon(mark,calibr,ammo);
+            MarkOfWeponTF.clear();
+            CalibrOfWeponTF.clear();
+            AmmoTF.clear();
+
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Add_wepon_Error");
+            alert.setContentText("Check all fiends for filling");
+            alert.showAndWait();
+        }
+    }
+    public void ClearWepon(){
+        MarkOfWeponTF.clear();
+        CalibrOfWeponTF.clear();
+        AmmoTF.clear();
+    }
 
     public void AddOfficer() {
         String name = "";
         String sName = "";
         Integer age = 0;
-        String workExp ="";
+        String workExp = "";
         String workSch = "";
         int flag = 0;
-        if (NameOfficerTF.getText().isEmpty())
-        {
+        if (NameOfficerTF.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Name_Error");
             alert.setContentText("Name not given");
             alert.showAndWait();
-        }
-        else {
+        } else {
             name = NameOfficerTF.getText();
             flag++;
         }
-        if(SNameOfficerTF.getText().isEmpty())
-        {
+        if (SNameOfficerTF.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Second_Name_Error");
             alert.setContentText("Second Name not given");
             alert.showAndWait();
-        }
-        else {
+        } else {
             sName = SNameOfficerTF.getText();
             flag++;
         }
-        if (AgeOfOfficerTF.getText().isEmpty())
-        {
+        if (AgeOfOfficerTF.getText().isEmpty()) {
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Age_Error");
             alert.setContentText("Age not given");
             alert.showAndWait();
-        }
-        else
-        {
+        } else {
             age = Integer.valueOf(AgeOfOfficerTF.getText());
             flag++;
         }
-        if(WorkExperience.getText().isEmpty()){
+        if (WorkExperience.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Work_Experience_Error");
             alert.setContentText("Work Experience not given");
             alert.showAndWait();
-        }
-        else {
+        } else {
             workExp = WorkExperience.getText();
             flag++;
         }
-        if(WorkSchedule.getText().isEmpty()){
+        if (WorkSchedule.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Work_Schedule_Error");
             alert.setContentText("Work_Schedule not given");
             alert.showAndWait();
-        }
-        else {
+        } else {
             workSch = WorkSchedule.getText();
             flag++;
         }
-        if (flag >= 5){
+        if (flag == 5) {
             Officer officer = new Officer(name, sName, age, workExp, workSch);
             NameOfficerTF.clear();
             SNameOfficerTF.clear();
             AgeOfOfficerTF.clear();
             WorkExperience.clear();
             WorkSchedule.clear();
-        }
-        else {
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Add_officer_Error");
             alert.setContentText("Check all fiends for filling");
@@ -144,6 +193,7 @@ public class StackController {
 
 
     }
+
 
     public void ClearerOfficer() {
         NameOfficerTF.clear();
@@ -191,7 +241,7 @@ public class StackController {
         } else {
             type = false;
         }
-        if (flag >= 3) {
+        if (flag == 3) {
             Client client = new Client(name, sName, age, type);
             nameOfClientTF.clear();
             secondnameOfClient.clear();
@@ -199,8 +249,7 @@ public class StackController {
             ToOfficer.setDisable(false);
             clickAddClient.setDisable(true);
 
-        }
-        else {
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Add_client_Error");
             alert.setContentText("Check all fiends for filling");
@@ -220,6 +269,20 @@ public class StackController {
         OfficerPanel.setDisable(false);
         OfficerPanel.setVisible(true);
         ClientPanel.setDisable(true);
+        WeponPanel.setVisible(false);
+        WeponPanel.setDisable(true);
+    }
+    public void clickToWepon(){
+
+        ClientPanel.setVisible(false);
+        ClientPanel.setDisable(true);
+
+        OfficerPanel.setDisable(true);
+        OfficerPanel.setVisible(false);
+
+        WeponPanel.setVisible(true);
+        WeponPanel.setDisable(false);
+
     }
 
     @FXML
@@ -228,8 +291,11 @@ public class StackController {
         ClientPanel.setDisable(false);
         OfficerPanel.setDisable(true);
         OfficerPanel.setVisible(false);
+        WeponPanel.setVisible(false);
+        WeponPanel.setDisable(true);
         typeOfVisitOneRB.setSelected(true);
-        if((nameOfClientTF.getText().isEmpty())&&(secondnameOfClient.getText().isEmpty())&&(ageOfClient.getText().isEmpty())){
+
+        if ((nameOfClientTF.getText().isEmpty()) && (secondnameOfClient.getText().isEmpty()) && (ageOfClient.getText().isEmpty())) {
             ToOfficer.setDisable(true);
             clickAddClient.setDisable(true);
         }

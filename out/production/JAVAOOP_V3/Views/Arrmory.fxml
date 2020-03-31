@@ -30,7 +30,7 @@
             <Button fx:id="ToOfficer" layoutX="93.0" layoutY="295.0" mnemonicParsing="false" onAction="#toOfficer" text="To Officer" />
          </children>
       </Pane>
-      <Pane fx:id="OfficerPanel" prefHeight="200.0" prefWidth="200.0">
+      <Pane fx:id="OfficerPanel" disable="true" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
             <TextField fx:id="NameOfficerTF" layoutX="112.0" layoutY="35.0" />
             <TextField fx:id="SNameOfficerTF" layoutX="151.0" layoutY="78.0" />
@@ -40,7 +40,7 @@
             <Button fx:id="clickAddOfficer" layoutX="16.0" layoutY="233.0" mnemonicParsing="false" onAction="#AddOfficer" text="Add Officer" />
             <Button fx:id="ClearerOfficer" layoutX="16.0" layoutY="270.0" mnemonicParsing="false" onAction="#ClearerOfficer" text="Clear all" />
             <Button layoutX="16.0" layoutY="307.0" mnemonicParsing="false" text="Cancel" />
-            <Button fx:id="toWepon" layoutX="16.0" layoutY="343.0" mnemonicParsing="false" text="To Wepon" />
+            <Button fx:id="toWepon" layoutX="16.0" layoutY="343.0" mnemonicParsing="false" onAction="#clickToWepon" text="To Wepon" />
             <Label layoutX="14.0" layoutY="39.0" text="Name of Officer:" />
             <Label layoutX="14.0" layoutY="82.0" text="Second name of Officer:" />
             <Label layoutX="14.0" layoutY="118.0" text="Age of Officer:" />
@@ -48,18 +48,18 @@
             <Label layoutX="16.0" layoutY="192.0" text="Work Schedule:" />
          </children>
       </Pane>
-      <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+      <Pane fx:id="WeponPanel" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TextField layoutX="14.0" layoutY="59.0" />
-            <TextField layoutX="14.0" layoutY="115.0" />
-            <TextField layoutX="14.0" layoutY="168.0" />
+            <TextField fx:id="MarkOfWeponTF" layoutX="14.0" layoutY="59.0" />
+            <TextField fx:id="CalibrOfWeponTF" layoutX="14.0" layoutY="115.0" />
+            <TextField fx:id="AmmoTF" layoutX="14.0" layoutY="168.0" />
             <Label layoutX="14.0" layoutY="42.0" text="Mark of Wepon:" />
             <Label layoutX="14.0" layoutY="98.0" text="Calibr of Wepon:" />
             <Label layoutX="14.0" layoutY="151.0" text="Ammo taken:" />
-            <Button layoutX="14.0" layoutY="216.0" mnemonicParsing="false" text="Add wepom" />
-            <Button layoutX="14.0" layoutY="256.0" mnemonicParsing="false" text="Clear all" />
+            <Button fx:id="AddWepon" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#clickAddWepon" text="Add wepom" />
+            <Button fx:id="WeponClealer" layoutX="14.0" layoutY="256.0" mnemonicParsing="false" text="Clear all" />
             <Button layoutX="14.0" layoutY="295.0" mnemonicParsing="false" text="Cancel" />
-            <Button layoutX="14.0" layoutY="332.0" mnemonicParsing="false" text="Show List Of Action" />
+            <Button fx:id="ToListOfAction" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" text="Show List Of Action" />
          </children>
       </Pane>
    </children>

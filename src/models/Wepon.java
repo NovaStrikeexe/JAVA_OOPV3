@@ -1,21 +1,12 @@
 package models;
 
-import javafx.beans.property.FloatProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
-public class Wepon extends EntityClass{
-    private StringProperty mark;
-    private FloatProperty calibr;
-    private IntegerProperty ammo;
+public class Wepon extends EntityClass {
+    private StringProperty mark = new SimpleStringProperty();
+    private FloatProperty calibr = new SimpleFloatProperty();
+    private IntegerProperty ammo = new SimpleIntegerProperty();
 
-
-
-    public Wepon() {
-        this.mark = mark;
-        this.calibr = calibr;
-        this.ammo = ammo;
-    }
 
     public String getMark() {
         return mark.get();
@@ -28,7 +19,7 @@ public class Wepon extends EntityClass{
     public void setMark(String mark) {
         this.mark.set(mark);
     }
-    
+
     public float getCalibr() {
         return calibr.get();
     }
@@ -52,4 +43,13 @@ public class Wepon extends EntityClass{
     public void setAmmo(int ammo) {
         this.ammo.set(ammo);
     }
+
+
+    public Wepon(){}
+    public Wepon(String mark, Float calibr, Integer ammo) {
+        this.mark.set(mark);
+        this.calibr.set(calibr);
+        this.ammo.set(ammo);
+    }
+
 }
