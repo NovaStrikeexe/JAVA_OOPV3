@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVAOOP_V3/models/Wepon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAOOP_V3/models/Wepon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/Arrmory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Arrmory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Wepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Wepon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +229,7 @@
       <workItem from="1585552776927" duration="2223000" />
       <workItem from="1585569747091" duration="7452000" />
       <workItem from="1585625136227" duration="3718000" />
+      <workItem from="1585728114003" duration="821000" />
     </task>
     <servers />
   </component>
@@ -247,9 +246,10 @@
     </state>
     <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584888918253" />
     <state x="718" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1585628728240" />
-    <state x="808" y="414" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584958111475">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="646" y="329" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585728126971">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="646" y="329" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834@0.0.1536.834" timestamp="1585728126971" />
     <state x="808" y="414" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1584958111475" />
     <state x="566" y="302" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584953444816">
       <screen x="0" y="0" width="1536" height="834" />
@@ -301,10 +301,10 @@
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584884667562" />
     <state x="311" y="0" key="SettingsEditor/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1585284291139" />
-    <state x="581" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1585625139271">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585728118577">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584942616282" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1585728118577" />
     <state x="581" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1585625139271" />
     <state x="594" y="58" key="refactoring.ChangeSignatureDialog" timestamp="1585629223380">
       <screen x="0" y="0" width="1920" height="1050" />
